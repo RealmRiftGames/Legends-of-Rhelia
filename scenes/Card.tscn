@@ -1,0 +1,207 @@
+[gd_scene load_steps=9 format=3 uid="uid://das6812d8f36g"]
+
+[ext_resource type="Script" path="res://scripts/Card.gd" id="1_rn7b8"]
+[ext_resource type="Texture2D" uid="uid://cayjv4duyctbl" path="res://assets/images/UI/00.png" id="2_yd4di"]
+[ext_resource type="FontFile" uid="uid://cqgkn38515giq" path="res://assets/BECKETT_.TTF" id="3_oy5xj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vu21y"]
+load_path = "res://.godot/imported/Glade Marshal.png-c73a7e739619db9ebd9bf80ce9251c87.ctex"
+
+[sub_resource type="Animation" id="Animation_1hjlt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Strength:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CardBackImage:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CardImage:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CardBackImage:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.372641, 0.372641)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CardImage:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.375, 0.375)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Strength:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-70, -95)]
+}
+
+[sub_resource type="Animation" id="Animation_ameyg"]
+resource_name = "card_flip"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Strength:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CardBackImage:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.34),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, -1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CardImage:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.34),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-1, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CardBackImage:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.34, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.375, 0.375), Vector2(0.1, 0.373), Vector2(0.373, 0.373)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CardImage:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.34, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.375, 0.375), Vector2(0.1, 0.375), Vector2(0.375, 0.375)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Strength:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.35, 0.48),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-42.835, -95), Vector2(-70, -95)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6lt70"]
+_data = {
+"RESET": SubResource("Animation_1hjlt"),
+"card_flip": SubResource("Animation_ameyg")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pleu"]
+size = Vector2(84.3159, 177.854)
+
+[node name="Card" type="Node2D"]
+position = Vector2(1316, 684)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_rn7b8")
+
+[node name="CardBackImage" type="Sprite2D" parent="."]
+scale = Vector2(0.372641, 0.372641)
+texture = ExtResource("2_yd4di")
+
+[node name="CardImage" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 1.19209e-07)
+scale = Vector2(0.375, 0.375)
+texture = SubResource("CompressedTexture2D_vu21y")
+
+[node name="Strength" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = -70.0
+offset_top = -95.0
+offset_right = 48.0
+offset_bottom = 50.0
+scale = Vector2(0.38, 0.38)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_oy5xj")
+theme_override_font_sizes/normal_font_size = 83
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6lt70")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.5181, 1.5181)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6pleu")

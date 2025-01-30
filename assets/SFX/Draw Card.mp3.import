@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmdp24pvx4d68"
+path="res://.godot/imported/Draw Card.mp3-0a911d2acb1b17006a803bc227a9ea53.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Draw Card.mp3"
+dest_files=["res://.godot/imported/Draw Card.mp3-0a911d2acb1b17006a803bc227a9ea53.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
